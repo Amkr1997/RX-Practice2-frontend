@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchMoviesAsync = createAsyncThunk("fetch/Movie", async () => {
   try {
     const response = await axios.get(
-      `https://rx-practice3-backend.vercel.app/movies`
+      `https://rx-practice2-backend.vercel.app/movies`
     );
     return response.data;
   } catch (error) {
@@ -17,7 +17,7 @@ export const addMovieAsync = createAsyncThunk(
   async (movieToAdd) => {
     try {
       const response = await axios.post(
-        `https://rx-practice3-backend.vercel.app/movies`,
+        `https://rx-practice2-backend.vercel.app/movies`,
         movieToAdd
       );
       return response.data;
@@ -32,7 +32,7 @@ export const updateMovieAsync = createAsyncThunk(
   async (movieData) => {
     try {
       const response = await axios.post(
-        `https://rx-practice3-backend.vercel.app/movies/${movieData._id}`,
+        `https://rx-practice2-backend.vercel.app/movies/${movieData._id}`,
         movieData
       );
 
@@ -48,7 +48,7 @@ export const deleteMovieAsync = createAsyncThunk(
   async (movieId) => {
     try {
       const response = await axios.delete(
-        `https://rx-practice3-backend.vercel.app/movies/${movieId}`
+        `https://rx-practice2-backend.vercel.app/movies/${movieId}`
       );
 
       return response.data;
